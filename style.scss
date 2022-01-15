@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+// Размеры экрана
+$max_tablet: 1024px;
+$max_mobile: 600px;
+
+//Переменные
+$pink: #F16D7F;
+$black: #222222;
+
+
+
+
+//Шрифты
+@mixin font_24 ($fw: normal, $fs: normal, $lh: 29px) {
+    font-size: 24px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
+    font-size: 14px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_48 ($fw: 900, $fs: normal, $lh: 58px) {
+    font-size: 48px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_32 ($fw: 900, $fs: normal, $lh: 38px) {
+    font-size: 32px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+
+
+
+//Импорт
+@import 'module/header';
+@import 'module/index';

@@ -1,0 +1,35 @@
+.header {
+   background-color: #222222;
+
+   & a:hover {
+      opacity: 0.7;
+   }
+
+   &__wrap {
+      padding: 16px 0;
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__left {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      & a:last-child {
+         padding-left: 40px;
+      }
+   }
+
+   &__right {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      & a:not(:first-child) {
+         padding-left: 40px;
+      }
+   }
+}
