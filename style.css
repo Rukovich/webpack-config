@@ -68,4 +68,72 @@
 .header__right a:not(:first-child) {
   padding-left: 40px;
 }
+
+.promo {
+  background-color: #F1E4E6;
+}
+
+.promo__block {
+  height: 91vh;
+  background-image: url(/img/index/man.png);
+  background-repeat: no-repeat;
+  background-position-x: -227px;
+  background-size: 97vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.promo__title {
+  border-left: 12px solid #F16D7F;
+  padding-left: 20px;
+}
+
+.promo__title h1 {
+  font-size: 48px;
+  font-weight: 900;
+  font-style: normal;
+  line-height: 58px;
+}
+
+.promo__title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 38px;
+}
+
+.promo__title span {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 38px;
+  color: #F16D7F;
+}
+
+.category {
+  padding-top: 65px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.category__item_4 {
+  grid-column: 1/-1;
+}
 /*# sourceMappingURL=style.css.map */
