@@ -238,6 +238,8 @@
 .card__block {
   width: 360px;
   min-height: 582px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card__block_img {
@@ -246,7 +248,7 @@
 
 .card__block_text {
   background-color: #F8F8F8;
-  padding-left: 16.5px;
+  padding: 0 16.5px;
 }
 
 .card__block_text a {
@@ -279,6 +281,59 @@
   color: #F16D7F;
 }
 
+.card__basket {
+  position: absolute;
+  height: 420px;
+  width: 360px;
+  background-color: rgba(58, 56, 56, 0.83);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 0;
+}
+
+.card__block:hover .card__basket {
+  opacity: 1;
+}
+
+.card__block:hover {
+  -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  border: 1px solid white;
+  padding: 10px 13px;
+  text-decoration: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17px;
+  color: white;
+  position: absolute;
+  cursor: pointer;
+}
+
 .browse {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -305,5 +360,130 @@
 .browse a:hover {
   color: white;
   background: #F16D7F;
+}
+
+.inform {
+  background: #222224;
+  height: 341px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inform__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inform__element {
+  width: 33%;
+  height: 135px;
+  text-align: center;
+  color: #FBFBFB;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inform__element img {
+  height: 40px;
+}
+
+.inform__element h3 {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.inform__element p {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17px;
+}
+
+.subscribe {
+  min-height: 450px;
+  background-image: url(/img/footer/subscribe-back.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+
+.subscribe__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.subscribe__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 360px;
+}
+
+.subscribe__left img {
+  width: 96px;
+}
+
+.subscribe__left p {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.subscribe__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 550px;
+}
+
+.subscribe__right p {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 29px;
 }
 /*# sourceMappingURL=style.css.map */

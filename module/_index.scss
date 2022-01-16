@@ -115,6 +115,8 @@
    &__block {
       width: 360px;
       min-height: 582px;
+      position: relative;
+      overflow: hidden;
    }
 
    &__block_img {
@@ -123,7 +125,7 @@
 
    &__block_text {
       background-color: #F8F8F8;
-      padding-left: 16.5px;
+      padding: 0 16.5px;
 
       & a {
          display: block;
@@ -145,6 +147,43 @@
          @include font_16;
          color: $pink;
       }
+   }
+
+   //Затемнение карточки
+   &__basket {
+      position: absolute;
+      height: 420px;
+      width: 360px;
+      background-color: rgba(58, 56, 56, 0.83);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: 0.5s;
+      top: 0;
+   }
+
+   &__block:hover .card__basket {
+      opacity: 1;
+   }
+
+   &__block:hover {
+      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+   }
+
+   &__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 140px;
+      border: 1px solid white;
+      padding: 10px 13px;
+      text-decoration: none;
+      background: transparent;
+      @include font_14;
+      color: white;
+      position: absolute;
+      cursor: pointer;
    }
 }
 
@@ -168,5 +207,84 @@
          background: $pink;
       }
    }
+}
 
+.inform {
+   background: #222224;
+   height: 341px;
+   display: flex;
+   align-items: center;
+
+   &__block {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__element {
+
+      & img {
+         height: 40px;
+      }
+
+      & h3 {
+         @include font_24
+      }
+
+      & p {
+         @include font_14
+      }
+
+      width: 33%;
+      height: 135px;
+      text-align: center;
+      color: #FBFBFB;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+}
+
+.subscribe {
+   min-height: 450px;
+   background-image: url(/img/footer/subscribe-back.png);
+   background-repeat: no-repeat;
+   background-position: 100%;
+   background-size: cover;
+
+   &__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+   }
+
+   &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      // height: 225px;
+      width: 360px;
+
+      & img {
+         width: 96px;
+      }
+
+      & p {
+         @include font_24;
+      }
+   }
+
+   &__right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 550px;
+
+      & p {
+         @include font_24;
+      }
+   }
 }
