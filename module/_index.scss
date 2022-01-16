@@ -1,6 +1,9 @@
 .promo {
    background-color: #F1E4E6;
 
+   //бургер
+   position: relative;
+
    &__block {
       min-height: 764px;
       display: flex;
@@ -28,6 +31,32 @@
          @include font_32 ($fw:bold);
          color: $pink;
       }
+   }
+
+   // &__menu {
+   //    position: absolute;
+   //    right: 0;
+   //    top: 0;
+   //    height: 100vh;
+   // }
+
+   &__menu {
+      width: 232px;
+      height: 100vh;
+      background: white;
+      margin-left: auto;
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+   }
+
+   //убирает элемент при клике
+   //При нажатии на бургер, должен сработать скрипт - починить
+   .hidden {
+      display: none;
    }
 }
 
