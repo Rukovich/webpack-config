@@ -2,15 +2,14 @@
    background-color: #F1E4E6;
 
    &__block {
-      // min-height: 764px;
-      height: 91vh;
-      background-image: url(/img/index/man.png);
-      background-repeat: no-repeat;
-      background-position-x: -227px;
-      background-size: 97vh;
+      min-height: 764px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      background-image: url(/img/index/man.png);
+      background-repeat: no-repeat;
+      background-position-x: -228px;
+
    }
 
    &__title {
@@ -253,6 +252,9 @@
    background-position: 100%;
    background-size: cover;
 
+   display: flex;
+   align-items: center;
+
    &__block {
       display: flex;
       justify-content: space-between;
@@ -264,15 +266,19 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      // height: 225px;
       width: 360px;
+
+      & span {
+         font-style: italic;
+      }
 
       & img {
          width: 96px;
+         margin-bottom: 30px;
       }
 
       & p {
-         @include font_24;
+         @include font_20;
       }
    }
 
@@ -283,8 +289,75 @@
       text-align: center;
       width: 550px;
 
-      & p {
-         @include font_24;
+      & h3 {
+         @include font_18;
+         margin-bottom: 30px;
+      }
+
+      & span {
+         @include font_24 ($fw:bold);
+      }
+
+      & input {
+         border-bottom-left-radius: 25px;
+         border-top-left-radius: 25px;
+         height: 49px;
+         width: 256px;
+         border: none;
+         float: left;
+         background-color: E1E1E1;
+         padding-left: 22px;
+
+      }
+
+      & button {
+         border-bottom-right-radius: 25px;
+         border-top-right-radius: 25px;
+         height: 49px;
+         width: 100px;
+         border: 0;
+         background-color: $pink;
+         color: white;
+         cursor: pointer;
+      }
+   }
+
+   &__right_form {
+      height: 49px;
+   }
+}
+
+.footer {
+   height: 80px;
+   background-color: #222224;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &__left {
+      color: white;
+   }
+
+   &__right {
+      display: flex;
+      justify-content: flex-end;
+      color: white;
+   }
+
+   &__link {
+      color: #000;
+      text-decoration: none;
+      font-size: 20px;
+      background-color: white;
+      padding: 10px;
+      margin: 5px;
+      width: 35px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+         background-color: #EF5B70;
       }
    }
 }

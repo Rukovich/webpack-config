@@ -34,6 +34,19 @@ $gray: #9F9F9F;
     line-height: $lh;
 }
 
+@mixin font_20 ($fw: normal, $fs: normal, $lh: 24px) {
+    font-size: 20px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_18 ($fw: normal, $fs: normal) {
+    font-size: 18px;
+    font-weight: $fw;
+    font-style: $fs;
+}
+
 @mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
     font-size: 14px;
     font-weight: $fw;
