@@ -1,0 +1,33 @@
+.pages {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &__ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 48px 0 96px 0;
+      width: 290px;
+      list-style-type: none;
+      border: 1px solid #ebebeb;
+      padding: 14px 14px;
+      cursor: pointer;
+   }
+
+   & a {
+      text-decoration: none;
+      @include font_16;
+      color: $gray;
+
+      &:hover {
+         color: $pink;
+      }
+   }
+
+   &__link {
+      color: #e2dfdf;
+      margin: 8px;
+      cursor: pointer;
+   }
+}

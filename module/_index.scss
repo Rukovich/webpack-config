@@ -1,15 +1,15 @@
 .promo {
    background-color: #F1E4E6;
 
-   //бургер
-   position: relative;
+   // //бургер
+   // position: relative;
 
    &__block {
       min-height: 764px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      background-image: url(/img/index/man.png);
+      background-image: url(../img/index/man.png);
       background-repeat: no-repeat;
       background-position-x: -228px;
 
@@ -33,13 +33,6 @@
       }
    }
 
-   // &__menu {
-   //    position: absolute;
-   //    right: 0;
-   //    top: 0;
-   //    height: 100vh;
-   // }
-
    &__menu {
       width: 232px;
       height: 100vh;
@@ -53,11 +46,7 @@
       height: 100vh;
    }
 
-   //убирает элемент при клике
-   //При нажатии на бургер, должен сработать скрипт - починить
-   .hidden {
-      display: none;
-   }
+
 }
 
 .category {
@@ -135,85 +124,7 @@
    }
 }
 
-.card {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: 30px;
 
-   &__block {
-      width: 360px;
-      min-height: 582px;
-      position: relative;
-      overflow: hidden;
-   }
-
-   &__block_img {
-      height: 420px;
-   }
-
-   &__block_text {
-      background-color: #F8F8F8;
-      padding: 0 16.5px;
-
-      & a {
-         display: block;
-         text-decoration: none;
-         padding-top: 25.5px;
-         @include font_16;
-         color: #000000;
-      }
-
-      & p {
-         padding-top: 12.5px;
-         @include font_14;
-         color: #5D5D5D;
-      }
-
-      & h4 {
-         padding-top: 18px;
-         padding-bottom: 20px;
-         @include font_16;
-         color: $pink;
-      }
-   }
-
-   //Затемнение карточки
-   &__basket {
-      position: absolute;
-      height: 420px;
-      width: 360px;
-      background-color: rgba(58, 56, 56, 0.83);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: 0.5s;
-      top: 0;
-   }
-
-   &__block:hover .card__basket {
-      opacity: 1;
-   }
-
-   &__block:hover {
-      box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
-   }
-
-   &__button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 140px;
-      border: 1px solid white;
-      padding: 10px 13px;
-      text-decoration: none;
-      background: transparent;
-      @include font_14;
-      color: white;
-      position: absolute;
-      cursor: pointer;
-   }
-}
 
 .browse {
    display: flex;
