@@ -967,6 +967,7 @@
 
 .sorting__items {
   margin-right: 28px;
+  border: none;
 }
 
 .sorting__items:last-child {
