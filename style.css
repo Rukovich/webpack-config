@@ -839,10 +839,7 @@
 .filter__up[open] {
   width: 360px;
   margin-bottom: 20px;
-  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   background-color: #FFFFFF;
-  cursor: pointer;
 }
 
 .filter__up[open] > summary {
@@ -856,6 +853,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: pointer;
 }
 
 .filter__down :hover {
@@ -864,11 +862,13 @@
 }
 
 .filter__down h3 {
-  font-weight: 600;
   font-size: 14px;
-  line-height: 20px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 17px;
   color: #000000;
   margin-left: 10px;
+  z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -879,6 +879,7 @@
 
 .filter__down svg {
   margin: 4px 0 0 11px;
+  z-index: 1;
 }
 
 .filter__down svg:hover {
@@ -890,6 +891,8 @@
   background-color: #FFFFFF;
   width: 360px;
   left: 0;
+  padding-top: 30px;
+  top: -10px;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 }
@@ -908,20 +911,22 @@
   border-bottom: 1px solid #EBEBEB;
   padding: 15px;
   outline: none;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 17px;
-  color: #EF5B70;
+  line-height: 17px;
+  color: #F16D7F;
+  cursor: pointer;
 }
 
 .filter__points {
   width: 360px;
   height: 344px;
   list-style-type: none;
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
   line-height: 29px;
   color: #6F6E6E;
   padding: 17px 0 0 34px;
@@ -931,11 +936,13 @@
   text-decoration: none;
   font-weight: normal;
   font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
   line-height: 17px;
   color: #6F6E6E;
 }
 
-.filter__right {
+.sorting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,7 +955,7 @@
 }
 
 @media (max-width: 1024px) {
-  .filter__right {
+  .sorting {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -958,15 +965,15 @@
   }
 }
 
-.filter__items {
+.sorting__items {
   margin-right: 28px;
 }
 
-.filter__items:last-child {
+.sorting__items:last-child {
   margin-right: 0;
 }
 
-.filter__items select {
+.sorting__items select {
   text-transform: uppercase;
   color: #6F6E6E;
   background: #FFFFFF;
@@ -974,13 +981,13 @@
 }
 
 @media (max-width: 600px) {
-  .filter__items select {
+  .sorting__items select {
     font-size: 12px;
     line-height: 14px;
   }
 }
 
-.filter__round {
+.sorting__round {
   background: #FFFFFF;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);

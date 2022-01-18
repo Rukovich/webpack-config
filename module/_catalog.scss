@@ -37,12 +37,14 @@
 
    &__button {
       display: flex;
+
    }
 
    &__left {
       position: absolute;
       outline: none;
       border: none;
+
    }
 
    &__up {
@@ -52,40 +54,39 @@
       position: relative;
       outline: none;
       border: none;
-
    }
 
    &__up[open] {
       width: 360px;
       margin-bottom: 20px;
-      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+      // box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
       background-color: #FFFFFF;
-      cursor: pointer;
    }
 
    &__up[open]>summary {
-      color: #F16D7F;
+      color: $pink;
       outline: none;
       border: none;
-   }
 
+   }
 
    &__down {
       display: block;
       display: flex;
+      cursor: pointer;
+
 
 
       & :hover {
-         color: #F16D7F;
+         color: $pink;
          background: #FFFFFF;
       }
 
       & h3 {
-         font-weight: 600;
-         font-size: 14px;
-         line-height: 20px;
+         @include font_14 ($fw:600);
          color: #000000;
          margin-left: 10px;
+         z-index: 1;
 
          @media (max-width: $max_mobile) {
             display: none;
@@ -94,9 +95,10 @@
 
       & svg {
          margin: 4px 0 0 11px;
+         z-index: 1;
 
          &:hover {
-            fill: #F16D7F;
+            fill: $pink;
          }
       }
    }
@@ -107,6 +109,9 @@
       width: 360px;
       left: 0;
       // тень
+
+      padding-top: 30px;
+      top: -10px;
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
    }
 
@@ -124,47 +129,44 @@
       border-bottom: 1px solid #EBEBEB;
       padding: 15px;
       outline: none;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
+      @include font_14 ($fw:normal);
       line-height: 17px;
-      color: #EF5B70;
+      color: $pink;
+      cursor: pointer;
    }
 
    &__points {
       width: 360px;
       height: 344px;
       list-style-type: none;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 29px;
+      @include font_14 ($lh:29px);
       color: #6F6E6E;
       padding: 17px 0 0 34px;
 
       & a {
          text-decoration: none;
          font-weight: normal;
-         font-size: 14px;
-         line-height: 17px;
+         @include font_14 ($lh:17px);
          color: #6F6E6E;
       }
    }
+}
 
-   &__right {
+
+.sorting {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   width: 100%;
+
+   @media (max-width: $max_tablet) {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-
-      @media (max-width: $max_tablet) {
-         display: flex;
-         justify-content: flex-end;
-      }
+      justify-content: flex-end;
    }
 
    &__items {
       margin-right: 28px;
+
 
       &:last-child {
          margin-right: 0;
@@ -189,3 +191,47 @@
       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
    }
 }
+
+
+
+
+// .filter {
+//    &__right {
+//       display: flex;
+//       justify-content: center;
+//       flex-wrap: wrap;
+//       width: 100%;
+
+//       @media (max-width: $max_tablet) {
+//          display: flex;
+//          justify-content: flex-end;
+//       }
+//    }
+
+//    &__items {
+//       margin-right: 28px;
+
+
+//       &:last-child {
+//          margin-right: 0;
+//       }
+
+//       & select {
+//          text-transform: uppercase;
+//          color: #6F6E6E;
+//          background: #FFFFFF;
+//          border: none;
+
+//          @media (max-width: $max_mobile) {
+//             font-size: 12px;
+//             line-height: 14px;
+//          }
+
+//       }
+//    }
+
+//    &__round {
+//       background: #FFFFFF;
+//       box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+//    }
+// }
