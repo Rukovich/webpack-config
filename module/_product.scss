@@ -25,5 +25,59 @@
       color: $pink;
       cursor: pointer;
    }
+}
+
+
+.specification {
+   border: 1px solid #EAEAEA;
+   margin-top: -64px;
+   margin-bottom: 129px;
+   position: relative;
+   background: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   &__filter {
+      display: flex;
+      justify-content: center;
+   }
+
+
+   & hr {
+      width: 63px;
+      height: 3px;
+      background-color: $pink;
+      border: none;
+   }
+
+
+   & h2 {
+      padding-top: 64px;
+      padding-bottom: 13px;
+      color: $pink;
+      @include font_14;
+   }
+
+   & h3 {
+      margin-top: 12px;
+      color: #4D4D4D;
+      @include font_18;
+   }
+
+   & p {
+      margin-top: 48.5px;
+      color: #5E5E5E;
+      text-align: center;
+      width: 50%;
+      @include font_14;
+   }
+
+   & h4 {
+      line-height: 29px;
+      color: $pink;
+      margin: 32px 0 65px 0;
+   }
+
 
 }

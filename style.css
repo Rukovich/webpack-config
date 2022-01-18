@@ -1034,4 +1034,73 @@
   color: #F16D7F;
   cursor: pointer;
 }
+
+.specification {
+  border: 1px solid #EAEAEA;
+  margin-top: -64px;
+  margin-bottom: 129px;
+  position: relative;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specification__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.specification hr {
+  width: 63px;
+  height: 3px;
+  background-color: #F16D7F;
+  border: none;
+}
+
+.specification h2 {
+  padding-top: 64px;
+  padding-bottom: 13px;
+  color: #F16D7F;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17px;
+}
+
+.specification h3 {
+  margin-top: 12px;
+  color: #4D4D4D;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.specification p {
+  margin-top: 48.5px;
+  color: #5E5E5E;
+  text-align: center;
+  width: 50%;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17px;
+}
+
+.specification h4 {
+  line-height: 29px;
+  color: #F16D7F;
+  margin: 32px 0 65px 0;
+}
 /*# sourceMappingURL=style.css.map */
