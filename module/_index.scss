@@ -64,7 +64,7 @@
 
 
    &__item {
-      background-image: url(../img/index/bacground-mini.png);
+      background-image: url(img/index/bacground-mini.png);
       //хочу добавить затемнение фона, не понимаю почему работает только для последнего изображения
       height: 100%;
       width: 100%;
@@ -186,7 +186,7 @@
 
 .subscribe {
    min-height: 450px;
-   background-image: url(/img/footer/subscribe-back.png);
+   background-image: url(img/footer/subscribe-back.png);
    background-repeat: no-repeat;
    background-position: 100%;
    background-size: cover;

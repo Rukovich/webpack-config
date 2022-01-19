@@ -159,9 +159,8 @@
    flex-wrap: wrap;
    width: 100%;
 
-   @media (max-width: $max_tablet) {
-      display: flex;
-      justify-content: flex-end;
+   & select {
+      cursor: pointer;
    }
 
    &__items {

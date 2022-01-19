@@ -92,6 +92,7 @@
 
 .burger {
   position: absolute;
+  z-index: 10;
   top: 75px;
   right: 0;
   width: 232px;
@@ -317,7 +318,7 @@
 }
 
 .category__item {
-  background-image: url(../img/index/bacground-mini.png);
+  background-image: url(img/index/bacground-mini.png);
   height: 100%;
   width: 100%;
 }
@@ -495,7 +496,7 @@
 
 .subscribe {
   min-height: 450px;
-  background-image: url(/img/footer/subscribe-back.png);
+  background-image: url(img/footer/subscribe-back.png);
   background-repeat: no-repeat;
   background-position: 100%;
   background-size: cover;
@@ -954,15 +955,8 @@
   width: 100%;
 }
 
-@media (max-width: 1024px) {
-  .sorting {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
+.sorting select {
+  cursor: pointer;
 }
 
 .sorting__items {
@@ -1057,16 +1051,25 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 64px;
+  width: 380px;
 }
 
-.specification hr {
+.specification .hr_top {
   width: 63px;
   height: 3px;
   background-color: #F16D7F;
   border: none;
+}
+
+.specification .hr_buttom {
+  width: 640px;
+  height: 1px;
+  border: none;
+  background-color: #9F9F9F;
 }
 
 .specification h2 {
@@ -1098,9 +1101,61 @@
   line-height: 17px;
 }
 
-.specification h4 {
+.specification__price {
   line-height: 29px;
   color: #F16D7F;
   margin: 32px 0 65px 0;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.specification select {
+  text-transform: uppercase;
+  color: #6F6E6E;
+  background: #FFFFFF;
+  border: none;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 17px;
+}
+
+.specification__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 49px 0 65px 0;
+}
+
+.specification__input {
+  border: 1px solid #F16D7F;
+  text-decoration: none;
+  padding: 14px 25px;
+  color: #F16D7F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.specification__input:hover {
+  color: white;
+  background-color: #F16D7F;
+}
+
+.specification__input i {
+  padding-right: 20px;
+  padding-top: 2px;
+}
+
+.product__margin-top {
+  margin-top: 128px;
 }
 /*# sourceMappingURL=style.css.map */
