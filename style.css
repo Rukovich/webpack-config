@@ -1158,4 +1158,12 @@
 .product__margin-top {
   margin-top: 128px;
 }
+
+.product-cart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 660px 360px;
+      grid-template-columns: 660px 360px;
+  gap: 125px;
+}
 /*# sourceMappingURL=style.css.map */
