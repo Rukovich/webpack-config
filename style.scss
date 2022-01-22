@@ -41,6 +41,13 @@ $gray: #9F9F9F;
     line-height: $lh;
 }
 
+@mixin font_22 ($fw: normal, $fs: normal, $lh: 26px) {
+    font-size: 22px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
 @mixin font_18 ($fw: normal, $fs: normal) {
     font-size: 18px;
     font-weight: $fw;

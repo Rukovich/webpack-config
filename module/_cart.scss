@@ -1,5 +1,50 @@
 .product-cart {
    display: grid;
-   grid-template-columns: 660px 360px;
+   grid-template-columns: 650px 360px;
    gap: 125px;
+}
+
+.product-left {
+
+   &__block {
+      max-width: 650px;
+      display: flex;
+      justify-content: flex-start;
+      box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+
+   }
+
+   &__close {
+      width: 18px;
+      height: 18px;
+      border: none;
+      background: none;
+      cursor: pointer;
+   }
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      padding: 22px 97px 0 31px;
+
+      & h4 {
+         @include font_24;
+      }
+
+      & ul {
+         padding-top: 42px;
+         list-style-type: none;
+         color: #575757;
+      }
+
+      & li {
+         @include font_22 ($lh:30px);
+      }
+
+      & span {
+         color: $pink;
+      }
+   }
+
+
 }
