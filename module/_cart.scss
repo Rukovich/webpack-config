@@ -1,31 +1,52 @@
 .product-cart {
    display: grid;
-   grid-template-columns: 650px 360px;
-   gap: 125px;
+   // grid-template-columns: 650px 360px;
+   // grid-template-columns: 1fr 1fr;
+   // gap: 125px;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-areas:
+      "main .shipping-left"
+      "main .shipping-right"
+      "nav . "
+
+
 }
 
 .product-left {
 
    &__block {
-      max-width: 650px;
       display: flex;
       justify-content: flex-start;
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 
-   }
-
-   &__close {
-      width: 18px;
-      height: 18px;
-      border: none;
-      background: none;
-      cursor: pointer;
+      &:first-child {
+         margin-bottom: 40px;
+         margin-top: 96px;
+      }
    }
 
    &__text {
       display: flex;
       flex-direction: column;
-      padding: 22px 97px 0 31px;
+      width: 390px;
+      padding: 22px 160px 22px 32px;
+      position: relative;
+
+      .Quantity {
+         display: flex;
+         align-items: flex-end;
+
+         &__text {
+            width: 44px;
+            height: 25px;
+            margin-left: 28px;
+            border: 1px solid #EAEAEA;
+            display: flex;
+            padding-left: 15px;
+            @include font_18;
+         }
+      }
 
       & h4 {
          @include font_24;
@@ -44,7 +65,30 @@
       & span {
          color: $pink;
       }
+
+      & button {
+         position: absolute;
+         width: 18px;
+         height: 18px;
+         border: none;
+         background: none;
+         cursor: pointer;
+         top: 28px;
+         right: 22px;
+      }
    }
+}
 
+.cart-nav {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 72.5px;
+   height: 60px; //удалить
 
+   & a {
+      outline: 1px solid #A4A4A4;
+      padding: 17px 40px;
+      color: #000000;
+      text-decoration: none;
+   }
 }

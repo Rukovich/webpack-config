@@ -1162,13 +1162,14 @@
 .product-cart {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 650px 360px;
-      grid-template-columns: 650px 360px;
-  gap: 125px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "main .shipping-left" "main .shipping-right" "nav . ";
 }
 
 .product-left__block {
-  max-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1179,12 +1180,9 @@
           box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
 }
 
-.product-left__close {
-  width: 18px;
-  height: 18px;
-  border: none;
-  background: none;
-  cursor: pointer;
+.product-left__block:first-child {
+  margin-bottom: 40px;
+  margin-top: 96px;
 }
 
 .product-left__text {
@@ -1195,7 +1193,32 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 22px 97px 0 31px;
+  width: 390px;
+  padding: 22px 160px 22px 32px;
+  position: relative;
+}
+
+.product-left__text .Quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.product-left__text .Quantity__text {
+  width: 44px;
+  height: 25px;
+  margin-left: 28px;
+  border: 1px solid #EAEAEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 .product-left__text h4 {
@@ -1220,5 +1243,34 @@
 
 .product-left__text span {
   color: #F16D7F;
+}
+
+.product-left__text button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  top: 28px;
+  right: 22px;
+}
+
+.cart-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 72.5px;
+  height: 60px;
+}
+
+.cart-nav a {
+  outline: 1px solid #A4A4A4;
+  padding: 17px 40px;
+  color: #000000;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

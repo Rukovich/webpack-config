@@ -97,71 +97,73 @@
 
 
    <section class="container product-cart">
-      <div class="product-left">
+      <main class="product-left">
          <div class="product-left__block">
             <img class="product-left__img" src="../img/cart/product-card-1.png" alt="">
             <div class="product-left__text">
-               <h4>MANGO PEOPLE <br> T-SHIRT</h4>
+               <h4>MANGO PEOPLE T-SHIRT</h4>
                <ul>
                   <li>Price: <span>$300</span></li>
                   <li>Color: Red</li>
                   <li>Size: Xl</li>
-                  <li>Quantity:</li>
+                  <div class="Quantity">
+                     <li>Quantity:</li>
+                     <input class="Quantity__text" type="text" value="2">
+                  </div>
+
                </ul>
-            </div>
-            <button class="product-left__close">
-               <img src="../img/cart/close.svg" alt="">
-            </button>
-         </div>
-
-         <div class="product-block">
-            <img class="product-block__img" src="img/cart/product-card-2.png" alt="">
-
-            <div class="product-block__text">
-               <h4>MANGO PEOPLE <br> T-SHIRT</h4>
-               <button class="product-block__close">
-                  <img src="img/cart/close.svg" alt="">
+               <button class="product-left__close">
+                  <img src="../img/cart/close.svg" alt="">
                </button>
+            </div>
+         </div>
+
+         <div class="product-left__block">
+            <img class="product-left__img" src="../img/cart/product-card-2.png" alt="">
+            <div class="product-left__text">
+               <h4>MANGO PEOPLE T-SHIRT</h4>
                <ul>
                   <li>Price: <span>$300</span></li>
                   <li>Color: Red</li>
                   <li>Size: Xl</li>
-                  <li>Quantity:</li>
+                  <div class="Quantity">
+                     <li>Quantity:</li>
+                     <div class="Quantity__text">2</div>
+                  </div>
                </ul>
+               <button class="product-left__close">
+                  <img src="../img/cart/close.svg" alt="">
+               </button>
             </div>
          </div>
+      </main>
 
-         <nav class="cart-nav">
-            <a href="#">CLEAR SHOPPING CART</a>
-            <a href="#">CONTINUE SHOPPING</a>
-         </nav>
-      </div>
       <!-- Боковая панель -->
-      <aside class="shipping-form">
-         <section class="shipping-left">
-            <p>SHIPPING ADRESS</p>
+      <!-- <aside class="shipping-form"> -->
+      <section class="shipping-left">
+         <p>SHIPPING ADRESS</p>
 
-            <form class="shipping-left__button" action="#">
-               <input type="adres" minlength="2" maxlength="10" placeholder="Bangladesh"><br>
-               <input type="tel" placeholder="State"><br>
-               <input type="text" placeholder="Postcode / Zip"><br>
-               <input class="shipping-left__send font__11p" type="submit" value="GET A QUOTE">
-            </form>
-         </section>
+         <form class="shipping-left__button" action="#">
+            <input type="adres" minlength="2" maxlength="10" placeholder="Bangladesh"><br>
+            <input type="tel" placeholder="State"><br>
+            <input type="text" placeholder="Postcode / Zip"><br>
+            <input class="shipping-left__send font__11p" type="submit" value="GET A QUOTE">
+         </form>
+      </section>
+      <nav class="cart-nav">
+         <a href="#">CLEAR SHOPPING CART</a>
+         <a href="#">CONTINUE SHOPPING</a>
+      </nav>
 
-         <section class="shipping-right">
-            <p>SUB TOTAL &nbsp &nbsp $900</p>
-            <h3>GRAND TOTAL &nbsp &nbsp <span style="color:#F16D7F;">$900</span></h3>
-            <hr>
-            <a href="/registration.html">PROCEED TO CHECKOUT</a>
-         </section>
-      </aside>
+      <section class="shipping-right">
+         <p>SUB TOTAL &nbsp &nbsp $900</p>
+         <h3>GRAND TOTAL &nbsp &nbsp <span style="color:#F16D7F;">$900</span></h3>
+         <hr>
+         <a href="/registration.html">PROCEED TO CHECKOUT</a>
+      </section>
+      <!-- </aside> -->
 
    </section>
-
-
-
-
 
    <footer>
       <section class="subscribe product__margin-top">
