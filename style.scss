@@ -90,6 +90,13 @@ $gray: #9F9F9F;
     line-height: $lh;
 }
 
+@mixin font_11 ($fw: normal, $fs: normal, $lh: 13px) {
+    font-size: 11px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
 
 
 
