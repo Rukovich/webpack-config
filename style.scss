@@ -61,6 +61,13 @@ $gray: #9F9F9F;
     line-height: $lh;
 }
 
+@mixin font_13 ($fw: 300, $fs: normal, $lh: 16px) {
+    font-size: 13px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
 
 @mixin font_16 ($fw: normal, $fs: normal, $lh: 19px) {
     font-size: 16px;
@@ -107,3 +114,4 @@ $gray: #9F9F9F;
 @import 'module/catalog';
 @import 'module/product';
 @import 'module/cart';
+@import 'module/registration';

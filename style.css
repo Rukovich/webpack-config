@@ -1405,4 +1405,115 @@
   border: none;
   background-color: #E2E2E2;
 }
+
+.registration-block {
+  margin-top: 64px;
+  margin-bottom: 96px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.reg-form {
+  width: 360px;
+  margin-right: 20px;
+}
+
+.reg-form__input {
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 16px;
+  width: 360px;
+  height: 45px;
+  border: 1px solid #A4A4A4;
+  padding: 0 0 0 17px;
+  background-image: url(../img/registration/arrow.svg);
+}
+
+.reg-form__ln, .reg-form__pw {
+  margin-top: 21px;
+}
+
+.reg-form h4 {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 19px;
+}
+
+.reg-form p {
+  margin: 15.5px 0 39px 0;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+
+.reg-form__gender {
+  margin: 32px 0 33px 0;
+}
+
+.reg-form__submit {
+  width: 167px;
+  height: 50px;
+  background: #F16D7F;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.reg-form__gender-r {
+  margin-left: 20px;
+}
+
+.reg-list {
+  max-width: 640px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reg-list h3 {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.reg-list p {
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.reg-list ul {
+  list-style-image: url(../img/registration/check.svg);
+  list-style-position: inside;
+}
+
+.reg-list li {
+  padding-bottom: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 29px;
+}
+
+.registration__margin-top {
+  margin-top: 96px;
+}
 /*# sourceMappingURL=style.css.map */
