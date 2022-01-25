@@ -1,17 +1,31 @@
 .promo {
    background-color: #F1E4E6;
 
-   // position: relative;
-
    &__block {
-      min-height: 764px;
+      // min-height: 764px;
+      height: 92vh;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       background-image: url(img/index/man.png);
       background-repeat: no-repeat;
-      background-position-x: -228px;
+      background-position-x: -20vh;
+      background-position-y: bottom;
+      background-size: 95vh;
 
+      //Адаптив
+      @media (max-width: $max_tablet) {
+         background-size: 85vh;
+         height: 82vh;
+      }
+
+      @media (max-width: $max_mobile) {
+         display: flex;
+         justify-content: center;
+         background-image: none;
+         height: 50vh;
+
+      }
    }
 
    &__title {
@@ -19,16 +33,49 @@
       padding-left: 20px;
 
       & h1 {
-         @include font_48
+         @include font_48 ($fw:bold);
       }
 
       & h2 {
-         @include font_32 ($fw:bold)
+         @include font_32 ($fw:bold);
       }
 
       & span {
          @include font_32 ($fw:bold);
          color: $pink;
+      }
+
+      //адаптив
+      @media (max-width: $max_tablet) {
+
+         & h1 {
+            @include font_44 ($fw:bold);
+         }
+
+         & h2 {
+            @include font_24 ($fw:bold);
+         }
+
+         & span {
+            @include font_24 ($fw:bold);
+            color: $pink;
+         }
+      }
+
+      @media (max-width: $max_mobile) {
+
+         & h1 {
+            @include font_38 ($fw:bold);
+         }
+
+         & h2 {
+            @include font_20 ($fw:bold);
+         }
+
+         & span {
+            @include font_20 ($fw:bold);
+            color: $pink;
+         }
       }
    }
 
@@ -44,8 +91,6 @@
       top: 0;
       height: 100vh;
    }
-
-
 }
 
 .category {
@@ -53,6 +98,17 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 20px;
+
+   //Адапив
+   @media (max-width: $max_tablet) {
+      padding-top: 20px;
+   }
+
+   @media (max-width: $max_mobile) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 32px;
+   }
 
    & img {
       width: 100%;
@@ -65,13 +121,19 @@
 
    &__item {
       background-image: url(img/index/bacground-mini.png);
-      //хочу добавить затемнение фона, не понимаю почему работает только для последнего изображения
+      background-color: rgba(59, 55, 55, 0.83);
+      display: flex;
       height: 100%;
       width: 100%;
    }
 
    &__item_4 {
       grid-column: 1/-1;
+
+      //Адапив
+      @media (max-width: $max_mobile) {
+         height: 180%;
+      }
    }
 
    &__item {
@@ -121,6 +183,11 @@
          color: $gray;
       }
    }
+
+   //Адапив
+   @media (max-width: $max_tablet) {
+      margin: 154px 0 93px 0;
+   }
 }
 
 
@@ -131,6 +198,10 @@
    margin: 48.5px 0 95.5px 0;
    color: $pink;
 
+   //Адапив
+   @media (max-width: $max_tablet) {
+      margin: 33px 0 64px 0;
+   }
 
    & a {
       padding: 13.5px 30px;
@@ -149,38 +220,55 @@
 
 .inform {
    background: #222224;
-   height: 341px;
+   min-height: 341px;
    display: flex;
    align-items: center;
 
    &__block {
       display: flex;
       justify-content: space-between;
+
+      //Адапив
+      @media (max-width: $max_tablet) {
+         flex-direction: column;
+         align-items: center;
+
+         &:first-child {
+            padding-top: 48px;
+         }
+
+      }
    }
 
    &__element {
+      width: 30%;
+      // height: 135px;
+      text-align: center;
+      color: #FBFBFB;
+      box-sizing: border-box;
+
+      //Адапив
+      @media (max-width: $max_tablet) {
+         flex-direction: column;
+         align-items: center;
+         min-width: 350px;
+         padding-bottom: 48px;
+      }
 
       & img {
          height: 40px;
       }
 
       & h3 {
-         @include font_24
+         @include font_24;
+         padding: 16px 0 16px 0;
       }
 
       & p {
          @include font_14
       }
 
-      width: 33%;
-      height: 135px;
-      text-align: center;
-      color: #FBFBFB;
-      box-sizing: border-box;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
    }
 }
 
@@ -190,14 +278,30 @@
    background-repeat: no-repeat;
    background-position: 100%;
    background-size: cover;
-
    display: flex;
    align-items: center;
+
+   //Адаптив
+   @media (max-width: $max_tablet) {
+      display: flex;
+      height: 610px;
+      align-content: space-around;
+      align-items: initial;
+      justify-content: initial;
+   }
 
    &__block {
       display: flex;
       justify-content: space-between;
       align-items: end;
+
+      //Адаптив
+      @media (max-width: $max_tablet) {
+         display: flex;
+         justify-content: space-evenly;
+         flex-direction: column;
+         align-items: center;
+      }
    }
 
    &__left {
@@ -273,6 +377,14 @@
    justify-content: space-between;
    align-items: center;
 
+   //Адаптив
+   @media (max-width: $max_mobile) {
+      height: 143px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+   }
+
    &__left {
       color: white;
    }
@@ -281,6 +393,10 @@
       display: flex;
       justify-content: flex-end;
       color: white;
+
+      @media (max-width: $max_mobile) {
+         margin-top: 40px;
+      }
    }
 
    &__link {
