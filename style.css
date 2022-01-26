@@ -992,8 +992,8 @@
 .card__basket {
   position: absolute;
   height: 420px;
-  width: 360px;
-  background-color: rgba(59, 55, 55, 0.83);
+  width: 100%;
+  background-color: rgba(75, 75, 75, 0.712);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1040,6 +1040,13 @@
   color: white;
   position: absolute;
   cursor: pointer;
+}
+
+.card__button:hover {
+  color: #F16D7F;
+  border-color: #F16D7F;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .pages {
