@@ -66,10 +66,9 @@
 
 .header__right_icon {
    position: relative;
-   padding-left: 40px;
 }
 
-//кол-во товара над корзиной
+//иконка товара над корзиной
 .header__right_icon span {
    width: 19px;
    height: 19px;
@@ -150,7 +149,8 @@
 
    @media (max-width: $max_mobile) {
       display: flex;
-      justify-content: space-around;
+      // justify-content: space-around;
+      justify-content: space-evenly;
       flex-direction: column;
    }
 

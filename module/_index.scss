@@ -309,7 +309,7 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      width: 360px;
+      max-width: 360px;
 
       & span {
          font-style: italic;
@@ -322,6 +322,11 @@
 
       & p {
          @include font_20;
+
+         //Адаптив
+         @media (max-width: $max_mobile) {
+            @include font_18;
+         }
       }
    }
 
@@ -330,11 +335,21 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      width: 550px;
+
+
+      & form {
+         display: flex;
+         justify-content: center;
+      }
 
       & h3 {
          @include font_18;
          margin-bottom: 30px;
+
+         //Адаптив
+         @media (max-width: $max_mobile) {
+            @include font_14;
+         }
       }
 
       & span {
@@ -350,6 +365,13 @@
          float: left;
          background-color: E1E1E1;
          padding-left: 22px;
+
+         //Адаптив
+         @media (max-width: $max_mobile) {
+            @include font_14;
+            // width: 230px;
+            width: 60vw;
+         }
 
       }
 

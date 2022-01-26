@@ -5,8 +5,6 @@
    justify-items: center;
    width: 100%;
 
-
-
    //Адаптив
    @media (max-width: $max_tablet) {
       grid-template-columns: repeat(2, 1fr);
@@ -20,6 +18,7 @@
 
    &__block {
       max-width: 360px;
+      width: 100%;
       position: relative;
       overflow: hidden;
 
@@ -52,6 +51,7 @@
    &__block_text {
       background-color: #F8F8F8;
       padding: 0 16.5px;
+      max-width: 360px;
 
       & a {
          display: block;
