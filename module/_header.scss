@@ -132,6 +132,13 @@
       color: #6F6E6E;
       line-height: 155%;
       padding-bottom: 20px;
+
+      & a {
+         &:hover {
+            color: black;
+            font-weight: bold;
+         }
+      }
    }
 }
 

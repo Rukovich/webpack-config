@@ -175,6 +175,11 @@
   padding-bottom: 20px;
 }
 
+.burger ul a:hover {
+  color: black;
+  font-weight: bold;
+}
+
 .hidden {
   display: none;
 }
