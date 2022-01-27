@@ -17,6 +17,7 @@
 //Размеры экрана
 $max_tablet: 1024px;
 $max_mobile: 600px;
+$small_mobile: 400px;
 $max_desktop: 1600px;
 
 //Переменные
@@ -51,6 +52,20 @@ $gray: #9F9F9F;
 
 @mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
     font-size: 14px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
+    font-size: 14px;
+    font-weight: $fw;
+    font-style: $fs;
+    line-height: $lh;
+}
+
+@mixin font_10 ($fw: normal, $fs: normal, $lh: 12px) {
+    font-size: 10px;
     font-weight: $fw;
     font-style: $fs;
     line-height: $lh;

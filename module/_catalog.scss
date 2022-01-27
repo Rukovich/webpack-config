@@ -67,8 +67,6 @@
       // box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
       background-color: #FFFFFF;
 
-      //Адаптив
-
    }
 
    &__up[open]>summary {
@@ -83,7 +81,6 @@
       display: flex;
       align-items: center;
       cursor: pointer;
-
 
       & :hover {
          color: $pink;
