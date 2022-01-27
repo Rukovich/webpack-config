@@ -1,6 +1,12 @@
 .product-cart {
    display: flex;
    justify-content: space-between;
+   align-items: center;
+
+   //Адаптив
+   @media (max-width: $max_tablet) {
+      flex-direction: column;
+   }
 }
 
 .product-left {
@@ -10,10 +16,29 @@
       justify-content: flex-start;
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
       width: 652px;
+      //отступ от края
+      margin-right: 20px;
+
 
       &:first-child {
          margin-bottom: 40px;
          margin-top: 96px;
+      }
+
+      //Адаптив
+      @media (max-width: $max_tablet) {
+         width: 734px;
+      }
+
+      @media (max-width: $max_mobile) {
+         width: 358px;
+      }
+   }
+
+   &__img {
+      @media (max-width: $max_mobile) {
+         display: block;
+         width: 158px;
       }
    }
 
@@ -22,6 +47,10 @@
       flex-direction: column;
       padding: 22px 160px 22px 32px;
       position: relative;
+
+      @media (max-width: $max_mobile) {
+         padding: 14px 53px 36px 17px;
+      }
 
       .Quantity {
          display: flex;
@@ -35,11 +64,26 @@
             display: flex;
             padding-left: 15px;
             @include font_18;
+
+            //Адаптив
+            @media (max-width: $max_mobile) {
+               width: 24px;
+               height: 15px;
+               margin-left: 15px;
+               padding-left: 8px;
+               @include font_10;
+            }
          }
+
+
       }
 
       & h4 {
          @include font_24;
+
+         @media (max-width: $max_mobile) {
+            @include font_16;
+         }
       }
 
       & ul {
@@ -50,6 +94,10 @@
 
       & li {
          @include font_22 ($lh:30px);
+
+         @media (max-width: $max_mobile) {
+            @include font_14;
+         }
       }
 
       & span {
@@ -74,6 +122,12 @@
    justify-content: space-between;
    margin-top: 72.5px;
 
+   //Адаптив
+   @media (max-width: $max_tablet) {
+      margin-top: 62.5px;
+      justify-content: space-evenly;
+   }
+
    & a {
       outline: 1px solid #A4A4A4;
       padding: 17px 40px;
@@ -83,6 +137,37 @@
 }
 
 .product-right {
+
+   //Адаптив
+   @media (max-width: $max_tablet) {
+      margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      //растояние между кнопками
+      :first-child {
+         margin-right: 10px;
+      }
+
+      :last-child {
+         margin-left: 10px;
+      }
+   }
+
+   @media (max-width: $max_mobile) {
+      flex-direction: column;
+      align-items: center;
+
+      :first-child {
+         margin-right: 0;
+      }
+
+      :last-child {
+         margin-left: 0;
+      }
+   }
+
    &__form {
       width: 360px;
       height: 272px;
@@ -91,8 +176,13 @@
       flex-direction: column;
       justify-content: space-between;
 
+      //Адаптив
+      @media (max-width: $max_tablet) {
+         margin-top: 0;
+      }
+
       & p {
-         @include font_16;
+         @include font_16 ($fw:300);
          display: block;
       }
 
@@ -102,6 +192,7 @@
          outline: 1px solid #A4A4A4;
          padding-left: 17px;
          border: none;
+
       }
 
       & button {
@@ -126,6 +217,11 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: start;
+
+      //Адаптив
+      @media (max-width: $max_tablet) {
+         margin-top: 17px;
+      }
 
       & p {
          text-align: right;

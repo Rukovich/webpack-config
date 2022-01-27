@@ -26,18 +26,19 @@
       cursor: pointer;
    }
 
-   .left {
-      left: 0;
+   .left,
+   .right {
       width: 47px;
       height: 47px;
       position: absolute;
    }
 
+   .left {
+      left: 0;
+   }
+
    .right {
-      width: 47px;
-      height: 47px;
       right: 0;
-      position: absolute;
    }
 
    & img {
