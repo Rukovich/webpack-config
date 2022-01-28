@@ -1,15 +1,17 @@
 .product-cart {
    display: flex;
    justify-content: space-between;
-   align-items: center;
+   align-items: flex-start;
 
    //Адаптив
    @media (max-width: $max_tablet) {
       flex-direction: column;
+      align-items: center;
    }
 }
 
 .product-left {
+
 
    &__block {
       display: flex;
@@ -17,7 +19,7 @@
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
       width: 652px;
       //отступ от края
-      margin-right: 20px;
+      margin-right: 10px;
 
 
       &:first-child {
@@ -27,11 +29,12 @@
 
       //Адаптив
       @media (max-width: $max_tablet) {
-         width: 734px;
+         max-width: 734px;
+         width: initial;
       }
 
       @media (max-width: $max_mobile) {
-         width: 358px;
+         max-width: 358px;
       }
    }
 
@@ -140,32 +143,16 @@
 
    //Адаптив
    @media (max-width: $max_tablet) {
+      width: 100%;
       margin-top: 64px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-
-      //растояние между кнопками
-      :first-child {
-         margin-right: 10px;
-      }
-
-      :last-child {
-         margin-left: 10px;
-      }
    }
 
    @media (max-width: $max_mobile) {
       flex-direction: column;
       align-items: center;
-
-      :first-child {
-         margin-right: 0;
-      }
-
-      :last-child {
-         margin-left: 0;
-      }
    }
 
    &__form {
@@ -178,6 +165,8 @@
 
       //Адаптив
       @media (max-width: $max_tablet) {
+         width: 45%;
+         max-width: 360px;
          margin-top: 0;
       }
 
@@ -221,7 +210,10 @@
       //Адаптив
       @media (max-width: $max_tablet) {
          margin-top: 17px;
+         width: 45%;
+         max-width: 360px;
       }
+
 
       & p {
          text-align: right;
@@ -248,27 +240,45 @@
          }
       }
 
-      & a {
+
+
+      .subtotal-a {
+         width: 100%;
          display: flex;
          justify-content: center;
-         outline: none;
-         margin: 0 42px;
-         width: 273px;
-         height: 50px;
-         background-color: $pink;
-         color: white;
-         padding: 15px 40px;
-         border: none;
-         text-decoration: none;
-         cursor: pointer;
-         @include font_16;
+
+         & a {
+            outline: none;
+            width: 70%;
+            text-align: center;
+            background-color: $pink;
+            color: white;
+            padding: 15px 0;
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            @include font_16;
+         }
+      }
+
+      .subtotal-hr {
+         display: flex;
+         justify-content: center;
+         width: 100%;
+
+         & hr {
+            width: 80%;
+         }
       }
 
       & hr {
+         display: block;
          display: flex;
          justify-content: center;
-         margin: 21px 42px 17px;
+         text-align: center;
+         margin: 21px 0 17px 0;
          width: 275px;
+         width: 70%;
          height: 1px;
          border: none;
          background-color: #E2E2E2;
