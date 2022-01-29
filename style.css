@@ -2081,9 +2081,28 @@
           align-items: start;
 }
 
+@media (max-width: 600px) {
+  .registration-block {
+    margin-top: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .reg-form {
-  width: 360px;
+  max-width: 360px;
   margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .reg-form {
+    margin-right: 0;
+  }
 }
 
 .reg-form__input {
@@ -2091,7 +2110,7 @@
   font-weight: 300;
   font-style: normal;
   line-height: 16px;
-  width: 360px;
+  width: 100%;
   height: 45px;
   border: 1px solid #A4A4A4;
   padding: 0 0 0 17px;
@@ -2130,6 +2149,11 @@
   border: none;
   color: white;
   cursor: pointer;
+  padding-right: 10%;
+  background-image: url(../img/catalog/arrow.svg);
+  background-repeat: no-repeat;
+  background-position-x: 121px;
+  background-position-y: center;
 }
 
 .reg-form__gender-r {
@@ -2147,6 +2171,12 @@
           flex-direction: column;
 }
 
+@media (max-width: 600px) {
+  .reg-list {
+    margin-top: 40px;
+  }
+}
+
 .reg-list h3 {
   font-size: 24px;
   font-weight: 300;
@@ -2154,11 +2184,31 @@
   line-height: 29px;
 }
 
+@media (max-width: 1024px) {
+  .reg-list h3 {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 19px;
+    margin-bottom: 15px;
+  }
+}
+
 .reg-list p {
   font-size: 24px;
   font-weight: 300;
   font-style: normal;
   line-height: 29px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .reg-list p {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 19px;
+  }
 }
 
 .reg-list ul {
@@ -2172,6 +2222,16 @@
   font-weight: 300;
   font-style: normal;
   line-height: 29px;
+}
+
+@media (max-width: 1024px) {
+  .reg-list li {
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 19px;
+    padding-bottom: 25px;
+  }
 }
 
 .registration__margin-top {
