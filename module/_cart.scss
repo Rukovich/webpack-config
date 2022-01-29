@@ -12,15 +12,20 @@
 
 .product-left {
 
+   //Адаптив
+   @media (max-width: $max_tablet) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
 
    &__block {
       display: flex;
       justify-content: flex-start;
       box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
       width: 652px;
-      //отступ от края
-      margin-right: 10px;
-
 
       &:first-child {
          margin-bottom: 40px;
@@ -30,12 +35,25 @@
       //Адаптив
       @media (max-width: $max_tablet) {
          max-width: 734px;
-         width: initial;
+         width: 100%;
+
+         &:first-child {
+            margin-bottom: 40px;
+            margin-top: 60px;
+         }
+
       }
 
       @media (max-width: $max_mobile) {
-         max-width: 358px;
+         max-width: 434px;
+         width: 100%;
+
+         &:first-child {
+            margin-bottom: 30px;
+            margin-top: 40px;
+         }
       }
+
    }
 
    &__img {
@@ -46,13 +64,20 @@
    }
 
    &__text {
+      width: 100%;
+      max-width: 734px;
       display: flex;
       flex-direction: column;
-      padding: 22px 160px 22px 32px;
+      padding: 22px 80px 22px 32px;
       position: relative;
 
-      @media (max-width: $max_mobile) {
+      //Адаптив
+      @media (max-width: $max_tablet) {
          padding: 14px 53px 36px 17px;
+      }
+
+      @media (max-width: $max_mobile) {
+         padding: 14px 40px 36px 17px;
       }
 
       .Quantity {
@@ -77,8 +102,6 @@
                @include font_10;
             }
          }
-
-
       }
 
       & h4 {
@@ -109,13 +132,20 @@
 
       & button {
          position: absolute;
-         width: 18px;
-         height: 18px;
          border: none;
          background: none;
          cursor: pointer;
          top: 28px;
          right: 22px;
+
+         @media (max-width: $max_mobile) {
+            top: 15px;
+
+            .product-left__close {
+               width: 11px;
+               height: 11px;
+            }
+         }
       }
    }
 }
@@ -127,22 +157,56 @@
 
    //Адаптив
    @media (max-width: $max_tablet) {
+      width: 100%;
       margin-top: 62.5px;
-      justify-content: space-evenly;
+      justify-content: center;
+   }
+
+   @media (max-width: $max_mobile) {
+      width: 100%;
+      margin-top: 30px;
+      justify-content: center;
    }
 
    & a {
+      display: block;
       outline: 1px solid #A4A4A4;
       padding: 17px 40px;
       color: #000000;
       text-decoration: none;
+
+      &:first-child {
+         margin-right: 25px;
+      }
+
+      &:last-child {
+         margin-left: 25px;
+      }
+
+      //Адаптив
+      @media (max-width: $max_mobile) {
+         padding: 9px 17px;
+         @include font_11;
+         text-align: center;
+
+         &:first-child {
+            margin-right: 5px;
+         }
+
+         &:last-child {
+            margin-left: 5px;
+         }
+      }
    }
 }
 
 .product-right {
+   //Отступ
+   margin-left: 20px;
 
    //Адаптив
    @media (max-width: $max_tablet) {
+      margin-left: 0;
       width: 100%;
       margin-top: 64px;
       display: flex;
@@ -156,7 +220,8 @@
    }
 
    &__form {
-      width: 360px;
+      width: 31vw;
+      max-width: 360px;
       height: 272px;
       margin-top: 96px;
       display: flex;
@@ -165,7 +230,13 @@
 
       //Адаптив
       @media (max-width: $max_tablet) {
-         width: 45%;
+         width: 47%;
+         max-width: 360px;
+         margin-top: 0;
+      }
+
+      @media (max-width: $max_mobile) {
+         width: 100%;
          max-width: 360px;
          margin-top: 0;
       }
@@ -198,7 +269,8 @@
    }
 
    &__subtotal {
-      width: 360px;
+      width: 31vw;
+      max-width: 360px;
       height: 214px;
       margin-top: 57.5px;
       background: #F5F3F3;
@@ -210,7 +282,13 @@
       //Адаптив
       @media (max-width: $max_tablet) {
          margin-top: 17px;
-         width: 45%;
+         width: 47%;
+         max-width: 360px;
+      }
+
+      @media (max-width: $max_tablet) {
+         margin-top: 50px;
+         width: 100%;
          max-width: 360px;
       }
 
@@ -253,7 +331,7 @@
             text-align: center;
             background-color: $pink;
             color: white;
-            padding: 15px 0;
+            padding: 15px 10px;
             border: none;
             text-decoration: none;
             cursor: pointer;
