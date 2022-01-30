@@ -120,11 +120,19 @@
 
 
    &__item {
-      background-image: url(img/index/bacground-mini.png);
-      background-color: rgba(59, 55, 55, 0.83);
+      position: relative;
       display: flex;
-      height: 100%;
-      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      & img {
+         filter: brightness(0.5);
+      }
+
+      //Адапив
+      @media (max-width: $max_tablet) {
+         width: 100%;
+      }
    }
 
    &__item_4 {
@@ -134,13 +142,6 @@
       @media (max-width: $max_mobile) {
          height: 180%;
       }
-   }
-
-   &__item {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
    }
 
    &__item_text {
@@ -243,7 +244,6 @@
 
    &__element {
       width: 30%;
-      // height: 135px;
       text-align: center;
       color: #FBFBFB;
       box-sizing: border-box;
@@ -252,8 +252,9 @@
       @media (max-width: $max_tablet) {
          flex-direction: column;
          align-items: center;
-         min-width: 350px;
          padding-bottom: 48px;
+         width: 100%;
+         max-width: 350px;
       }
 
       & img {
@@ -434,6 +435,11 @@
 
       &:hover {
          background-color: #EF5B70;
+         transition: 0.3s;
+      }
+
+      &:active {
+         transform: scale(1.2);
       }
    }
 }

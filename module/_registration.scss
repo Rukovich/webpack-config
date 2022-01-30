@@ -52,30 +52,29 @@
       margin: 32px 0 33px 0;
    }
 
-   // &__submit {
-   //    display: flex;
-
-   //    & input {
-   //       background: $pink;
-   //       border: none;
-   //       color: white;
-   //       width: 167px;
-   //       height: 50px;
-   //       cursor: pointer;
-   //    }
-   // }
    &__submit {
       width: 167px;
       height: 50px;
-      background: $pink;
-      border: none;
-      color: white;
+      background: white;
+      border: 1px solid $pink;
+      color: $pink;
       cursor: pointer;
       padding-right: 10%;
-      background-image: url(../img/catalog/arrow.svg);
+      background-image: url(../img/registration/arrow-pink.svg);
       background-repeat: no-repeat;
       background-position-x: 121px;
       background-position-y: center;
+   }
+
+   &__submit:hover {
+      color: white;
+      background: $pink;
+      transition: 0.3s;
+      background-image: url(../img/registration/arrow.svg);
+      background-repeat: no-repeat;
+      background-position-x: 121px;
+      background-position-y: center;
+
    }
 
 

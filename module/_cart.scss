@@ -138,13 +138,20 @@
          top: 28px;
          right: 22px;
 
+         & :hover {
+            opacity: 0.7;
+            transition: 0.3s;
+         }
+
          @media (max-width: $max_mobile) {
             top: 15px;
+         }
+      }
 
-            .product-left__close {
-               width: 11px;
-               height: 11px;
-            }
+      .product-left__close {
+         @media (max-width: $max_mobile) {
+            width: 11px;
+            height: 11px;
          }
       }
    }
@@ -154,6 +161,11 @@
    display: flex;
    justify-content: space-between;
    margin-top: 72.5px;
+
+   & :hover {
+      opacity: 0.7;
+      transition: 0.3s;
+   }
 
    //Адаптив
    @media (max-width: $max_tablet) {
@@ -174,6 +186,7 @@
       padding: 17px 40px;
       color: #000000;
       text-decoration: none;
+
 
       &:first-child {
          margin-right: 25px;
@@ -265,6 +278,11 @@
          border: none;
          outline: 1px solid #A4A4A4;
          cursor: pointer;
+
+         &:hover {
+            opacity: 0.7;
+            transition: 0.3s;
+         }
       }
    }
 

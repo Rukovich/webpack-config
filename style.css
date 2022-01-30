@@ -58,10 +58,19 @@
 
 .header__left a:hover {
   opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__left a:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .header__left img:hover {
   opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header__right {
@@ -83,6 +92,13 @@
 
 .header__right img:hover {
   opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header__right img:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .header__right a:not(:first-child) {
@@ -435,26 +451,6 @@
 }
 
 .category__item {
-  background-image: url(img/index/bacground-mini.png);
-  background-color: rgba(59, 55, 55, 0.83);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.category__item_4 {
-  grid-column: 1/-1;
-}
-
-@media (max-width: 600px) {
-  .category__item_4 {
-    height: 180%;
-  }
-}
-
-.category__item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -465,6 +461,27 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.category__item img {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+@media (max-width: 1024px) {
+  .category__item {
+    width: 100%;
+  }
+}
+
+.category__item_4 {
+  grid-column: 1/-1;
+}
+
+@media (max-width: 600px) {
+  .category__item_4 {
+    height: 180%;
+  }
 }
 
 .category__item_text {
@@ -630,8 +647,9 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-width: 350px;
     padding-bottom: 48px;
+    width: 100%;
+    max-width: 350px;
   }
 }
 
@@ -904,6 +922,13 @@
 
 .footer__link:hover {
   background-color: #EF5B70;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer__link:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .card {
@@ -1147,7 +1172,6 @@
 }
 
 .filter__up[open] {
-  width: 360px;
   margin-bottom: 20px;
   background-color: #FFFFFF;
 }
@@ -1211,18 +1235,13 @@
 .filter__content {
   position: absolute;
   background-color: #FFFFFF;
-  width: 360px;
+  max-width: 360px;
+  width: 90vw;
   left: 0;
   padding-top: 30px;
   top: -10px;
   -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
           box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-}
-
-@media (max-width: 600px) {
-  .filter__content {
-    width: 300px;
-  }
 }
 
 .filter__catlist {
@@ -1237,6 +1256,7 @@
   display: block;
   border-left: 5px solid #EF5B70;
   border-bottom: 1px solid #EBEBEB;
+  margin-right: 10px;
   padding: 15px;
   outline: none;
   font-size: 14px;
@@ -1249,7 +1269,6 @@
 }
 
 .filter__points {
-  width: 360px;
   height: 344px;
   list-style-type: none;
   font-size: 14px;
@@ -1290,6 +1309,17 @@
   }
 }
 
+@media (max-width: 400px) {
+  .sorting {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+}
+
 .sorting select {
   cursor: pointer;
 }
@@ -1307,6 +1337,18 @@
   .sorting__items {
     font-size: 12px;
     line-height: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sorting__items {
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -1339,8 +1381,8 @@
           align-items: center;
   background-color: #F7F7F7;
   width: 100%;
-  height: 777px;
   position: relative;
+  height: 75vh;
 }
 
 @media (max-width: 1024px) {
@@ -1367,6 +1409,8 @@
 .slider__btn:hover {
   color: #F16D7F;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .slider .left,
@@ -1385,7 +1429,8 @@
 }
 
 .slider img {
-  max-width: 597px;
+  margin-bottom: 64px;
+  width: 55vh;
 }
 
 @media (max-width: 1024px) {
@@ -1396,11 +1441,13 @@
 
 @media (max-width: 600px) {
   .slider img {
-    width: 374px;
+    max-width: 374px;
+    width: 100%;
   }
 }
 
 .specification {
+  width: 80vw;
   border: 1px solid #EAEAEA;
   margin-top: -64px;
   margin-bottom: 129px;
@@ -1421,6 +1468,7 @@
 @media (max-width: 1024px) {
   .specification {
     margin-top: 0;
+    width: 100%;
   }
 }
 
@@ -1435,9 +1483,12 @@
   width: 380px;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .specification__filter {
-    width: 305px;
+    max-width: 305px;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -1552,6 +1603,8 @@
 .specification__input:hover {
   color: white;
   background-color: #F16D7F;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .specification__input i {
@@ -1774,11 +1827,20 @@
   right: 22px;
 }
 
+.product-left__text button :hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 @media (max-width: 600px) {
   .product-left__text button {
     top: 15px;
   }
-  .product-left__text button .product-left__close {
+}
+
+@media (max-width: 600px) {
+  .product-left__text .product-left__close {
     width: 11px;
     height: 11px;
   }
@@ -1792,6 +1854,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 72.5px;
+}
+
+.cart-nav :hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (max-width: 1024px) {
@@ -1941,6 +2009,12 @@
   border: none;
   outline: 1px solid #A4A4A4;
   cursor: pointer;
+}
+
+.product-right__form button:hover {
+  opacity: 0.7;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .product-right__subtotal {
@@ -2145,12 +2219,23 @@
 .reg-form__submit {
   width: 167px;
   height: 50px;
-  background: #F16D7F;
-  border: none;
-  color: white;
+  background: white;
+  border: 1px solid #F16D7F;
+  color: #F16D7F;
   cursor: pointer;
   padding-right: 10%;
-  background-image: url(../img/catalog/arrow.svg);
+  background-image: url(../img/registration/arrow-pink.svg);
+  background-repeat: no-repeat;
+  background-position-x: 121px;
+  background-position-y: center;
+}
+
+.reg-form__submit:hover {
+  color: white;
+  background: #F16D7F;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-image: url(../img/registration/arrow.svg);
   background-repeat: no-repeat;
   background-position-x: 121px;
   background-position-y: center;
