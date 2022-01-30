@@ -126,6 +126,7 @@
       .Quantity_input {
          @include font_22 ($lh:30px);
 
+         //Адаптив
          @media (max-width: $max_mobile) {
             @include font_14;
          }
