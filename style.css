@@ -927,8 +927,8 @@
 }
 
 .footer__link:active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 .card {
@@ -1084,10 +1084,6 @@
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-.card__button ~ .card__svg {
-  fill: yellow;
 }
 
 .pages {
@@ -1798,7 +1794,12 @@
   color: #575757;
 }
 
-.product-left__text li {
+.product-left__text .Quantity {
+  color: #575757;
+}
+
+.product-left__text li,
+.product-left__text .Quantity_input {
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
@@ -1806,7 +1807,8 @@
 }
 
 @media (max-width: 600px) {
-  .product-left__text li {
+  .product-left__text li,
+  .product-left__text .Quantity_input {
     font-size: 14px;
     font-weight: 300;
     font-style: normal;
