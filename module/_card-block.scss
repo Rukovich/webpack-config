@@ -50,13 +50,15 @@
 
    &__block_text {
       background-color: #F8F8F8;
-      padding: 0 16.5px;
+      padding: 25.5px 16.5px 20px 16.5px;
       max-width: 360px;
+      // padding-top: 25.5px;
+      // padding-bottom: 20px;
 
       & a {
          display: block;
          text-decoration: none;
-         padding-top: 25.5px;
+         // padding-top: 25.5px;
          @include font_16;
          color: #000000;
 
@@ -73,7 +75,7 @@
 
       & h4 {
          padding-top: 18px;
-         padding-bottom: 20px;
+         // padding-bottom: 20px;
          @include font_16;
          color: $pink;
       }
