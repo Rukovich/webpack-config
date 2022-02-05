@@ -147,6 +147,7 @@
       @include font_24;
    }
 
+   // Не получается стилизовать элементы select и option. Без JS получится?
    & select {
       text-transform: uppercase;
       color: #6F6E6E;
