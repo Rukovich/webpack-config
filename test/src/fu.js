@@ -1,4 +1,4 @@
 const fu = () => {
-  alert('fu');
+  alert('fu2');
 }
 export default fu;
