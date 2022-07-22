@@ -1,4 +1,4 @@
 const fu = () => {
-  alert('fu2');
+  alert('fu332');
 }
 export default fu;

@@ -1,8 +1,9 @@
 div {
-  color: red;
+  color: rgb(18, 233, 18);
 }
+
 p {
   height: 512px;
   width: 512px;
   background-image: url("./delete_icon.png");
-} 
+}

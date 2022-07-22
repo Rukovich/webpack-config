@@ -126,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst fu = () => {\r\n  alert('fu2');\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fu);\n\n//# sourceURL=webpack://test/./src/fu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst fu = () => {\r\n  alert('fu332');\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fu);\n\n//# sourceURL=webpack://test/./src/fu.js?");
 
 /***/ }),
 

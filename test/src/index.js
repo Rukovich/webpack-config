@@ -1,4 +1,4 @@
 import fu from './fu';
-import './style.css'
+import './style.css';
 
 fu();

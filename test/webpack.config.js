@@ -3,16 +3,17 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-
+  // target: 'web',
   entry: './src/index.js',
 
   output: {
     //Название файла в которое собирается прилоение
-    filename: 'index.js', 
+    filename: 'index.js',
     //Путь к папке
     path: path.resolve(__dirname, 'build'), //изначально было 'dist'
-    path: path.output,
-    clean: true
+    clean: true,
+    // path: path.output,
+    // watchContentBase: true,
   },
 
   //Плагины
@@ -20,6 +21,9 @@ module.exports = {
     //плагин позволяет собирать HTML файл
     new HtmlWebpackPlugin({
       template: './src/index.html',
+
+      // inject: true,
+      // filename: 'index.html'
     }),
   ],
 
@@ -41,7 +45,12 @@ module.exports = {
 
   //Какой мод используется для локального сервера
   mode: 'development',
+
   devServer: {
     static: './build',
+    historyApiFallback: true,
+
+    //Отслеживает файлы, без параметра не работает обновление HTML
+    watchFiles: './src/index.html'
   },
 }
