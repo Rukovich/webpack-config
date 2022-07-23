@@ -1,29 +1,27 @@
 //импортируем объекты
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const miniCss = require('mini-css-extract-plugin'); //scss
 
 module.exports = {
   // target: 'web',
   entry: './src/index.js',
+  mode: 'development',  //Какой мод используется для локального сервера
 
   output: {
-    //Название файла в которое собирается прилоение
-    filename: 'index.js',
-    //Путь к папке
-    path: path.resolve(__dirname, 'build'), //изначально было 'dist'
+    filename: 'index.js', //Название файла в которое собирается прилоение
+    path: path.resolve(__dirname, 'build'),//Путь к папке
     clean: true,
-    // path: path.output,
-    // watchContentBase: true,
   },
 
   //Плагины
   plugins: [
-    //плагин позволяет собирать HTML файл
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({ //плагин позволяет собирать HTML файл
       template: './src/index.html',
-
-      // inject: true,
-      // filename: 'index.html'
+    }),
+    //
+    new miniCss({
+      filename: '../style.css',
     }),
   ],
 
@@ -31,10 +29,8 @@ module.exports = {
   module: {
     rules: [
       {
-        //К каким элементам мы принимаем какое-либо правило
-        test: /\.css$/i,
-        //Правило которое мы применяем к элементам
-        use: ['style-loader', 'css-loader'],
+        test: /\.(c|sa|sc)ss$/i,  //К каким элементам мы принимаем какое-либо правило
+        use: ['style-loader', 'css-loader', 'sass-loader'],  //Правило которое мы применяем к элементам
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -43,14 +39,9 @@ module.exports = {
     ],
   },
 
-  //Какой мод используется для локального сервера
-  mode: 'development',
-
   devServer: {
     static: './build',
     historyApiFallback: true,
-
-    //Отслеживает файлы, без параметра не работает обновление HTML
-    watchFiles: './src/index.html'
+    watchFiles: './src/index.html'  //Отслеживает файлы, без параметра не работает обновление HTML
   },
 }
