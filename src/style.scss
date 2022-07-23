@@ -1,3 +1,5 @@
+@import './components/header/header';
+
 * {
   margin: 0;
   padding: 0;
@@ -15,69 +17,13 @@
 
 }
 
-.header {
-  background-color: #222222;
-  padding: 16px 0;
-  height: 75px;
+//Размеры экрана
+$max_tablet: 1024px;
+$max_mobile: 600px;
+$small_mobile: 400px;
+$max_desktop: 1600px;
 
-
-  &__wrap {
-    //бургер
-    position: relative;
-    //бургер
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__left {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    & a:last-child {
-      margin-left: 40px;
-    }
-
-    & a {
-      &:hover {
-        opacity: 0.7;
-        transition: 0.3s;
-      }
-
-      &:active {
-        transform: scale(1.2);
-      }
-    }
-
-    & img:hover {
-      opacity: 0.7;
-      transition: 0.3s;
-    }
-
-  }
-
-  &__right {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    & img {
-      display: block;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 0.7;
-        transition: 0.3s;
-      }
-
-      &:active {
-        transform: scale(1.2);
-      }
-    }
-
-    & a:not(:first-child) {
-      padding-left: 40px;
-    }
-  }
-}
+//Переменные
+// $pink: #F16D7F;
+// $black: #222222;
+// $gray: #9F9F9F;
