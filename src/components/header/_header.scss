@@ -1,5 +1,9 @@
 .header {
-  background-color: #222222;
+  // $green: green;
+  background-color: $green;
+
+
+  // background-color: #222222;
   padding: 16px 0;
   height: 75px;
 
@@ -67,11 +71,11 @@
       // }
     }
 
-    & span {
-      // @media (max-width: $max_mobile) {
-      //   display: none;
-      // }
-    }
+    // & span {
+    //   @media (max-width: $max_mobile) {
+    //     display: none;
+    //   }
+    // }
   }
 }
 
@@ -180,8 +184,11 @@
 
     & a {
       // @include font_24;
+      // $pink: #F16D7F;
       // color: $pink;
       text-decoration: none;
+      // $green: #3cff00;
+      // color: $green;
     }
   }
 

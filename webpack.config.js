@@ -32,7 +32,19 @@ module.exports = {
     rules: [
       {
         test: /\.(c|sa|sc)ss$/i,  //К каким элементам мы принимаем какое-либо правило
-        use: ['style-loader', 'css-loader', 'sass-loader'],  //Правило которое мы применяем к элементам
+        use: ['style-loader', // Creates `style` nodes from JS strings
+          'css-loader', //Translates CSS into CommonJS
+          'sass-loader', // Compiles Sass to CSS
+
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              // Provide path to the file with resources
+              resources: ['./src/vars.scss']
+            },
+          }
+
+        ],
       },
       /* Решение ниже
       {
