@@ -1,0 +1,94 @@
+.promo {
+  background-color: #F1E4E6;
+
+  &__block {
+    // min-height: 764px;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(./img/man.png);
+    background-repeat: no-repeat;
+    background-position-x: -20vh;
+    background-position-y: bottom;
+    background-size: 95vh;
+
+    //Адаптив
+    @media (max-width: $max_tablet) {
+      background-size: 85vh;
+      height: 82vh;
+    }
+
+    @media (max-width: $max_mobile) {
+      display: flex;
+      justify-content: center;
+      background-image: none;
+      height: 50vh;
+
+    }
+  }
+
+  &__title {
+    border-left: 12px solid $pink;
+    padding-left: 20px;
+
+    & h1 {
+      @include font_48 ($fw: bold);
+    }
+
+    & h2 {
+      @include font_32 ($fw: bold);
+    }
+
+    & span {
+      @include font_32 ($fw: bold);
+      color: $pink;
+    }
+
+    //адаптив
+    @media (max-width: $max_tablet) {
+
+      & h1 {
+        @include font_44 ($fw: bold);
+      }
+
+      & h2 {
+        @include font_24 ($fw: bold);
+      }
+
+      & span {
+        @include font_24 ($fw: bold);
+        color: $pink;
+      }
+    }
+
+    @media (max-width: $max_mobile) {
+
+      & h1 {
+        @include font_38 ($fw: bold);
+      }
+
+      & h2 {
+        @include font_20 ($fw: bold);
+      }
+
+      & span {
+        @include font_20 ($fw: bold);
+        color: $pink;
+      }
+    }
+  }
+
+  &__menu {
+    width: 232px;
+    height: 100vh;
+    background: white;
+    margin-left: auto;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+  }
+}

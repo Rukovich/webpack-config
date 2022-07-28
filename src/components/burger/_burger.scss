@@ -1,0 +1,62 @@
+.burger {
+  position: absolute;
+  z-index: 10;
+  top: 75px;
+  right: 0;
+  width: 232px;
+  background-color: white;
+  padding-left: 34px;
+  height: 90vh;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+  .burger_close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+  }
+
+  & a {
+    text-decoration: none;
+    // @include font_14 ($fw: normal);
+    color: #6F6E6E;
+  }
+
+  & h2 {
+    padding-top: 37px;
+    padding-bottom: 24px;
+    // @include font_14 ($fw: bold);
+  }
+
+  & h3 {
+    // color: $pink;
+    padding-bottom: 12px;
+    // @include font_14 ($fw: normal);
+  }
+
+  &__close {
+    position: absolute;
+    margin-left: 205px-34px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  & ul {
+    padding-left: 17px;
+    list-style: none;
+    color: #6F6E6E;
+    line-height: 155%;
+    padding-bottom: 20px;
+
+    & a {
+      &:hover {
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

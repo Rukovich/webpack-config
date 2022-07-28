@@ -12,8 +12,6 @@ module.exports = {
     filename: 'index.js', //Название файла в которое собирается прилоение
     path: path.resolve(__dirname, 'build'),//Путь к папке
     clean: true,
-    //
-    // assetModuleFilename: 'assets/images/[name][ext]'
   },
 
   //Плагины
@@ -43,23 +41,14 @@ module.exports = {
               resources: ['./src/vars.scss']
             },
           }
-
         ],
       },
-      /* Решение ниже
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: ['asset/resource']
-      },
-      */
       {
         test: /\.html$/,
         use: 'html-loader'
       },
     ],
   },
-
-
   devServer: {
     static: './build',
     historyApiFallback: true,

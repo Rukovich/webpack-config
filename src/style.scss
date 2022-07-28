@@ -1,4 +1,14 @@
 @import './components/header/header';
+@import './components/burger/burger';
+@import './components/promo/promo';
+@import './components/category/category';
+@import './components/description/description';
+@import './components/card/card';
+@import './components/browse/browse';
+@import './components/inform/inform';
+@import './components/subscribe/subscribe';
+@import './components/footer/footer';
+
 
 * {
   margin: 0;
@@ -13,17 +23,6 @@
   max-width: 1160px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 20px;
-
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
-//Размеры экрана
-$max_tablet: 1024px;
-$max_mobile: 600px;
-$small_mobile: 400px;
-$max_desktop: 1600px;
-
-//Переменные
-// $pink: #F16D7F;
-// $black: #222222;
-// $gray: #9F9F9F;

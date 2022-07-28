@@ -1,0 +1,51 @@
+.inform {
+  background: #222224;
+  min-height: 341px;
+  display: flex;
+  align-items: center;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    //Адапив
+    @media (max-width: $max_tablet) {
+      flex-direction: column;
+      align-items: center;
+
+      &:first-child {
+        padding-top: 48px;
+      }
+
+    }
+  }
+
+  &__element {
+    width: 30%;
+    text-align: center;
+    color: #FBFBFB;
+    box-sizing: border-box;
+
+    //Адапив
+    @media (max-width: $max_tablet) {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 48px;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    & img {
+      height: 40px;
+    }
+
+    & h3 {
+      @include font_24;
+      padding: 16px 0 16px 0;
+    }
+
+    & p {
+      @include font_14
+    }
+  }
+}

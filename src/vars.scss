@@ -1,3 +1,118 @@
-// @import './components/header/header';
+//Размеры экрана
+$max_tablet: 1024px;
+$max_mobile: 600px;
+$small_mobile: 400px;
+$max_desktop: 1600px;
 
-$green: green;
+//Переменные
+$pink: #F16D7F;
+$black: #222222;
+$gray: #9F9F9F;
+$green: #3cff00;
+
+
+//Шрифты
+@mixin font_24 ($fw: normal, $fs: normal, $lh: 29px) {
+  font-size: 24px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_22 ($fw: normal, $fs: normal, $lh: 26px) {
+  font-size: 22px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_18 ($fw: normal, $fs: normal) {
+  font-size: 18px;
+  font-weight: $fw;
+  font-style: $fs;
+}
+
+@mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
+  font-size: 14px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
+  font-size: 14px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_10 ($fw: normal, $fs: normal, $lh: 12px) {
+  font-size: 10px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_13 ($fw: 300, $fs: normal, $lh: 16px) {
+  font-size: 13px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+
+@mixin font_16 ($fw: normal, $fs: normal, $lh: 19px) {
+  font-size: 16px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_20 ($fw: normal, $fs: normal, $lh: 24px) {
+  font-size: 20px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_48 ($fw: normal, $fs: normal, $lh: 58px) {
+  font-size: 48px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_44 ($fw: 900, $fs: normal, $lh: 53px) {
+  font-size: 44px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_32 ($fw: 900, $fs: normal, $lh: 38px) {
+  font-size: 32px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_30 ($fw: normal, $fs: normal, $lh: 36px) {
+  font-size: 30px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_38 ($fw: normal, $fs: normal, $lh: 46px) {
+  font-size: 38px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}
+
+@mixin font_11 ($fw: normal, $fs: normal, $lh: 13px) {
+  font-size: 11px;
+  font-weight: $fw;
+  font-style: $fs;
+  line-height: $lh;
+}

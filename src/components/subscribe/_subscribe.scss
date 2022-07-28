@@ -1,0 +1,119 @@
+.subscribe {
+  min-height: 450px;
+  background-image: url(./img/subscribe-back.png);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+
+  //Адаптив
+  @media (max-width: $max_tablet) {
+    display: flex;
+    height: 610px;
+    align-content: space-around;
+    align-items: initial;
+    justify-content: initial;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    //Адаптив
+    @media (max-width: $max_tablet) {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 360px;
+
+    & span {
+      font-style: italic;
+    }
+
+    & img {
+      width: 96px;
+      margin-bottom: 30px;
+    }
+
+    & p {
+      @include font_20;
+
+      //Адаптив
+      @media (max-width: $max_mobile) {
+        @include font_18;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+    & form {
+      display: flex;
+      justify-content: center;
+    }
+
+    & h3 {
+      @include font_18;
+      margin-bottom: 30px;
+
+      //Адаптив
+      @media (max-width: $max_mobile) {
+        @include font_14;
+      }
+    }
+
+    & span {
+      @include font_24 ($fw: bold);
+    }
+
+    & input {
+      border-bottom-left-radius: 25px;
+      border-top-left-radius: 25px;
+      height: 49px;
+      width: 256px;
+      border: none;
+      float: left;
+      background-color: E1E1E1;
+      padding-left: 22px;
+
+      //Адаптив
+      @media (max-width: $max_mobile) {
+        @include font_14;
+        // width: 230px;
+        width: 60vw;
+      }
+
+    }
+
+    & button {
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+      height: 49px;
+      width: 100px;
+      border: 0;
+      background-color: $pink;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  &__right_form {
+    height: 49px;
+  }
+}

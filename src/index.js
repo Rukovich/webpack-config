@@ -1,5 +1,5 @@
 
-import headerBurger from './components/header';
+import Burger from './components/burger';
 
 
 import './style.css';
