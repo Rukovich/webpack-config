@@ -1,0 +1,24 @@
+.description {
+  &__note {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 96px 0 48px 0;
+
+    & h3 {
+      @include font_30;
+      color: black;
+    }
+
+    & p {
+      @include font_14;
+      color: $gray;
+    }
+  }
+
+  //Адапив
+  @media (max-width: $max_tablet) {
+    margin: 154px 0 93px 0;
+  }
+}

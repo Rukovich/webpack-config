@@ -1,0 +1,51 @@
+.footer {
+  height: 80px;
+  background-color: #222224;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //Адаптив
+  @media (max-width: $max_mobile) {
+    height: 143px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+
+  &__left {
+    color: white;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+
+    @media (max-width: $max_mobile) {
+      margin-top: 40px;
+    }
+  }
+
+  &__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 35px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: #EF5B70;
+      transition: 0.3s;
+    }
+
+    &:active {
+      transform: scale(1.4);
+    }
+  }
+}

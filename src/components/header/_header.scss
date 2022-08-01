@@ -1,0 +1,151 @@
+.header {
+  background-color: $black;
+  padding: 16px 0;
+  height: 75px;
+
+  &__wrap {
+    //бургер
+    position: relative;
+    //бургер
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & a:last-child {
+      margin-left: 40px;
+    }
+
+    & a {
+      &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+
+    & img:hover {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & img {
+      display: block;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+
+      &:active {
+        transform: scale(1.2);
+      }
+    }
+
+    & a:not(:first-child) {
+      padding-left: 40px;
+
+      @media (max-width: $max_mobile) {
+        display: none;
+      }
+    }
+
+    & span {
+      @media (max-width: $max_mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.header__right_icon {
+  position: relative;
+}
+
+//иконка товара над корзиной
+.header__right_icon span {
+  width: 19px;
+  height: 19px;
+  color: white;
+  background: $pink;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  right: -10px;
+  top: -5px;
+  font-size: 12px;
+  line-height: 19px;
+}
+
+
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 148px;
+  background: #F8F3F4;
+
+  @media (max-width: $max_mobile) {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  &__left {
+    display: block;
+
+    & a {
+      // @include font_24;
+      color: $pink;
+      text-decoration: none;
+      color: $green;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+      color: $gray;
+      text-decoration: none;
+      // @include font_14;
+
+      &::before {
+        content: '/';
+        margin: 0 5px;
+        color: $gray;
+        font-weight: normal;
+      }
+
+      &:first-child::before {
+        content: '';
+        margin: 0 5px;
+        color: $pink;
+      }
+
+      &:last-child {
+        color: $pink;
+        // @include font_14 ($fw: bold);
+        text-decoration: none;
+      }
+    }
+  }
+}
