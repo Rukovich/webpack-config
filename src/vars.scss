@@ -39,13 +39,6 @@ $green: #3cff00;
   line-height: $lh;
 }
 
-@mixin font_14 ($fw: 300, $fs: normal, $lh: 17px) {
-  font-size: 14px;
-  font-weight: $fw;
-  font-style: $fs;
-  line-height: $lh;
-}
-
 @mixin font_10 ($fw: normal, $fs: normal, $lh: 12px) {
   font-size: 10px;
   font-weight: $fw;
@@ -59,7 +52,6 @@ $green: #3cff00;
   font-style: $fs;
   line-height: $lh;
 }
-
 
 @mixin font_16 ($fw: normal, $fs: normal, $lh: 19px) {
   font-size: 16px;

@@ -5,7 +5,7 @@
   justify-items: center;
   width: 100%;
 
-  //Адаптив
+  // Адаптив
   @media (max-width: $max_tablet) {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -52,8 +52,6 @@
     background-color: #F8F8F8;
     padding: 25.5px 16.5px 20px 16.5px;
     max-width: 360px;
-    // padding-top: 25.5px;
-    // padding-bottom: 20px;
 
     & a {
       display: block;
@@ -70,12 +68,11 @@
     & p {
       padding-top: 12.5px;
       @include font_14;
-      color: #5D5D5D;
+      color: $gray;
     }
 
     & h4 {
       padding-top: 18px;
-      // padding-bottom: 20px;
       @include font_16;
       color: $pink;
     }
